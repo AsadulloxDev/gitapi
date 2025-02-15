@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Home() {
   const [cities, setCities] = useState([]); // Shaharlarni saqlash uchun state
-
+  const basUrl = ""
   // API dan shaharlarni olish
   useEffect(() => {
     fetch("https://realauto.limsa.uz/api/cities")
