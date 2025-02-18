@@ -3,6 +3,7 @@ import Home from "./Components/Home"
 import Product from "./Components/Product"
 import Categories from "./Components/Categories"
 import App from "./App"
+import Login from "./Login"
 export const Router = createBrowserRouter([
     {
         path: "/",
@@ -11,6 +12,10 @@ export const Router = createBrowserRouter([
             {
                 path: "/cars",
                 element: <Product/>,
+            },
+            {
+                path: "/login",
+                element: <Login/>,
             },
             {
                 path: "/",

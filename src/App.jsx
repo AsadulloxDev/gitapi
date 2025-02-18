@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Sidebar from './Components/Sidebar'
-import { Outlet } from 'react-router-dom'
-import Home from './Components/Home'
+import { Outlet, useNavigate } from 'react-router-dom'
+import Login from './Login'
+import Layout from './Layout'
 
 function App() {
-  return (
-    <>
-    <Sidebar></Sidebar>
-    <Outlet></Outlet>
-    </>
-  )
+  const token = localStorage.getItem('token')
+  const navigate = useNavigate()
+  useEffect(()=>{
+    if(!token){
+      navigate('/login')
+    } else {
+      navigate('/')
+    }
+  }, [])
+  return token ? <Layout/> : <Login/>
 }
-
 export default App

@@ -21,10 +21,10 @@ function Categories() {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="max-w-sm w-full bg-white rounded-lg shadow-lg overflow-hidden"
+            className="max-w-sm w-full bg-white rounded-lg shadow-lg"
           >
             <img
-              src={`https://realauto.limsa.uz/uploads/images/${category.image_src}`} // API'dan kelgan rasm manzili
+              src={`https://realauto.limsa.uz/api/uploads/images/${category.image_src}`} // API'dan kelgan rasm manzili
               alt={category.id} 
               className="w-full h-48 object-cover"
             />

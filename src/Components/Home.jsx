@@ -44,9 +44,9 @@ function Home() {
                   <tr key={city.id} className="text-center text-blue-950">
                     <td className="p-4 border-r border-gray-500">
                       <img
-                        src={`https://realauto.limsa.uz/uploads/images/${city.image_src}`} // Rasmlar uchun to'g'ri manzil
+                        src={`https://realauto.limsa.uz/api/uploads/images/${city.image_src}`} // Rasmlar uchun to'g'ri manzil
                         alt={city.name}
-                        className="w-16 h-16 rounded-lg mx-auto"
+                        className="w-[200px] h-[100px] rounded-lg mx-auto"
                       />
                     </td>
                     <td className="p-4 border-r border-gray-500">{city.name}</td>
